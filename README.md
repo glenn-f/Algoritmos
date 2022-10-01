@@ -1,6 +1,6 @@
 # Base de Código de Implementações
 
-Este repositório contém as minhas implementações de algoritmos e estruturas de dados realizadas para os problemas e desafios do **Grupo de Estudos de Algoritmos** do <a href="https://icomp.ufam.edu.br/">IComp - UFAM</a>, iniciado em set/2022.
+Este repositório contém as minhas implementações de algoritmos e estruturas de dados realizadas para os problemas e desafios do **Grupo de Estudos de Algoritmos** do [IComp - UFAM](https://icomp.ufam.edu.br/), iniciado em set/2022.
 
 ## Estrutura do Repositório
 
