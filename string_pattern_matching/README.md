@@ -16,7 +16,7 @@ Este problema pode ser descrito como: a partir de um **texto** qualquer e um **p
 ## Outras Abordagens
 
 - Shift-Or
-- Backward DAWG$^1$ Matching (BDM): Correspondência Invertida em Grafo de Palavras
+- Backward DAWG $^1$  Matching (BDM): Correspondência Invertida em Grafo de Palavras
 - Boyer-Moore (BM)
 
-$^1$Deterministic Acyclic Word Graph (DAWG) -> Grafo Acíclico Determinístico de Palavras
+$^1$ Deterministic Acyclic Word Graph (DAWG) -> Grafo Acíclico Determinístico de Palavras
