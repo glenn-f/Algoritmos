@@ -1,4 +1,4 @@
-/* Glenn Fonseca >> GitHub: glenn-f/
+/* Glenn Fonseca >> GitHub: glenn-f/Algoritmos
  */
 #include <iostream>
 #include <cstdint>
@@ -8,11 +8,11 @@
 #define TEXT_MAX_LENGHT 1024  // Tamanho máximo do texto
 #define WORD_BYTE_SIZE 8 // Tamanho da palavra no sistema: 8->64bits, 4->32bits
 #if WORD_BYTE_SIZE == 8
-    #define INT_T uint64_t
-    #define INICIAL UINT64_MAX
+#define INT_T uint64_t
+#define INICIAL UINT64_MAX
 #else
-    #define INT_T uint32_t
-    #define INICIAL UINT32_MAX
+#define INT_T uint32_t
+#define INICIAL UINT32_MAX
 #endif
 
 int shift_or(char *texto, char *padrao)
@@ -26,10 +26,10 @@ int shift_or(char *texto, char *padrao)
     // Inicializar tabela de mascaras com bit '1' todas posicoes
     memset(mask, 0xFF, (ALFAB_SIZE * WORD_BYTE_SIZE));
     // Colocar um bit '0' onde o padrao ocorre invertidamente
-    for (INT_T i = 0, j = 1; i < tam_padrao; i++, j <<= 1)
+    for (int i = 0, j = 1; i < tam_padrao; i++, j <<= 1)
         mask[padrao[i]] &= ~j;
     // Atualizar o estado com SHIFT e depois OR em iteração pelo texto usando a mask do alfabeto
-    for (INT_T i = 0; i < tam_texto; i++)
+    for (int i = 0; i < tam_texto; i++)
     {
         estado_atual = (estado_atual << 1) | mask[texto[i]];
         // Se encontrar '0' no estado final -> retornar posicao inicial da substring.
@@ -59,6 +59,7 @@ int main(int argc, char const *argv[])
     }
     // Busca pelo padrão usando Shift-Or
     posicao = shift_or(texto, padrao);
+    std::cout << "\nBusca com Shift-Or: WORD >> " << WORD_BYTE_SIZE<< " ALFABETO >> " << ALFAB_SIZE << "\n\n";
     // Imprimir resultado
     if (posicao > -1)
     {
